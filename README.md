@@ -123,9 +123,10 @@ Métodos: Gerar(), Exportar().
 5 - Estratégia de Programação com IA
 
 Revisão de Código com IA
-Descrição:
 
-O estudante escreve o código do sistema de gerenciamento de consultas médicas e, em seguida, utiliza uma IA para revisar o código. A IA pode ajudar a identificar bugs, sugerir melhorias de performance, ou apontar violações de boas práticas de programação.
+Essas foram as informações fornecidas pelo ChatGPT:
+
+A IA pode ajudar a identificar bugs, sugerir melhorias de performance, ou apontar violações de boas práticas de programação.
 Como Implementar:
 
 Escrever Código: O estudante desenvolve uma parte ou a totalidade do sistema conforme os requisitos funcionais.
@@ -141,7 +142,7 @@ Vantagens:
 Melhoria da qualidade do código.
 Identificação de problemas que podem passar despercebidos.
 Aprendizado contínuo de boas práticas de programação.
-2. Estudo com Auxílio da IA
+* Estudo com Auxílio da IA
 Descrição:
 
 O estudante utiliza a IA para aprender sobre temas específicos relacionados ao projeto, como gerenciamento de estado, design de interfaces, ou padrões de design. A IA pode fornecer explicações, exemplos de código, e exercícios práticos.
@@ -157,7 +158,7 @@ Vantagens:
 Aprendizado direcionado e personalizado.
 Prática com feedback imediato.
 Exploração de tópicos avançados ou pouco compreendidos.
-3. Programação por Pares com IA
+* Programação por Pares com IA
 Descrição:
 
 O estudante utiliza a IA como um parceiro de programação. A IA pode sugerir partes do código, ajudar na resolução de problemas, ou colaborar no design do sistema.
