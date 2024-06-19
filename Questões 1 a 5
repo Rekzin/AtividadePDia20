@@ -2,7 +2,9 @@
 
 1 - Proposta de Problema:
 
-A saúde é um aspecto crucial para a sociedade, e a gestão eficiente de consultas médicas é essencial para garantir que os pacientes recebam o cuidado adequado no momento certo. O objetivo deste projeto é desenvolver um sistema de gerenciamento de consultas médicas que facilite o agendamento, acompanhamento e gestão de consultas em uma clínica médica. O sistema deve ser interativo, intuitivo e capaz de lidar com diversas funcionalidades necessárias para uma clínica. 
+A saúde é um aspecto crucial para a sociedade, e a gestão eficiente de consultas médicas é essencial para garantir que os pacientes recebam o cuidado adequado no momento certo, 
+o objetivo deste projeto é desenvolver um sistema de gerenciamento de consultas médicas que facilite o agendamento, acompanhamento e gestão de consultas em uma clínica médica. 
+O sistema deve ser interativo, intuitivo e capaz de lidar com diversas funcionalidades necessárias para uma clínica.
 
 2 - Requisitos Funcionais:
 
@@ -18,8 +20,8 @@ Telefone
 
 * Cadastro de Médicos
 
-O sistema deve permitir o cadastro de novos médicos.
-O sistema deve solicitar e armazenar as seguintes informações dos médicos:
+O sistema deve per de novos médicos.
+O sistema deve solicitar e armazenar mitir o cadastroas seguintes informações dos médicos:
 Nome
 Especialidade
 CRM
@@ -93,6 +95,7 @@ O sistema deve fornecer feedback adequado ao usuário sobre as ações realizada
 
 
 A IA se mostrou eficaz na identificação dos requisitos funcionais básicos para um Sistema de Gerenciamento de Consultas Médicas, abordando aspectos essenciais como cadastro de pacientes e médicos, agendamento e visualização de consultas, notificações, e segurança de dados. No entanto, há espaço para melhorias, especialmente em termos de especificidade, consideração de funcionalidades avançadas, e detalhes sobre a implementação prática dos requisitos, além disso, a IA se confunde entre os requsitos de usuário, funcionais e não funcionais.
+No entanto, há espaço para melhorias, especialmente em termos de especificidade, consideração de funcionalidades avançadas, e detalhes sobre a implementação prática dos requisitos, além disso, a IA se confunde entre os requsitos de usuário, funcionais e não funcionais.
 
 4 - Diagrama de classe
 
