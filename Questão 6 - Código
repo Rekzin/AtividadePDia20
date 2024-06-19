@@ -1,0 +1,158 @@
+using System;
+using System.Collections.Generic;
+
+namespace SistemaConsultasMedicas
+{
+    class Program
+    {
+        static List<Paciente> pacientes = new List<Paciente>();
+        static List<Medico> medicos = new List<Medico>();
+        static List<Consulta> consultas = new List<Consulta>();
+
+        static void Main(string[] args)
+        {
+            int opcao;
+            do
+            {
+                Console.Clear();
+                Console.WriteLine("Sistema de Gerenciamento de Consultas Médicas");
+                Console.WriteLine("1. Cadastrar Paciente");
+                Console.WriteLine("2. Cadastrar Médico");
+                Console.WriteLine("3. Agendar Consulta");
+                Console.WriteLine("4. Visualizar Consultas");
+                Console.WriteLine("5. Sair");
+                Console.Write("Escolha uma opção: ");
+                opcao = int.Parse(Console.ReadLine());
+
+                switch (opcao)
+                {
+                    case 1:
+                        CadastrarPaciente();
+                        break;
+                    case 2:
+                        CadastrarMedico();
+                        break;
+                    case 3:
+                        AgendarConsulta();
+                        break;
+                    case 4:
+                        VisualizarConsultas();
+                        break;
+                    case 5:
+                        Console.WriteLine("Saindo...");
+                        break;
+                    default:
+                        Console.WriteLine("Opção inválida!");
+                        break;
+                }
+
+                Console.WriteLine("Pressione qualquer tecla para continuar...");
+                Console.ReadKey();
+
+            } while (opcao != 5);
+        }
+
+        static void CadastrarPaciente()
+        {
+            Console.Clear();
+            Console.WriteLine("Cadastro de Paciente");
+            Paciente paciente = new Paciente();
+            Console.Write("Nome: ");
+            paciente.Nome = Console.ReadLine();
+            Console.Write("Data de Nascimento (dd/MM/yyyy): ");
+            paciente.DataNascimento = DateTime.Parse(Console.ReadLine());
+            Console.Write("CPF: ");
+            paciente.CPF = Console.ReadLine();
+            Console.Write("Endereço: ");
+            paciente.Endereco = Console.ReadLine();
+            Console.Write("Telefone: ");
+            paciente.Telefone = Console.ReadLine();
+            pacientes.Add(paciente);
+            Console.WriteLine("Paciente cadastrado com sucesso!");
+        }
+
+        static void CadastrarMedico()
+        {
+            Console.Clear();
+            Console.WriteLine("Cadastro de Médico");
+            Medico medico = new Medico();
+            Console.Write("Nome: ");
+            medico.Nome = Console.ReadLine();
+            Console.Write("Especialidade: ");
+            medico.Especialidade = Console.ReadLine();
+            Console.Write("CRM: ");
+            medico.CRM = Console.ReadLine();
+            medicos.Add(medico);
+            Console.WriteLine("Médico cadastrado com sucesso!");
+        }
+
+        static void AgendarConsulta()
+        {
+            Console.Clear();
+            Console.WriteLine("Agendamento de Consulta");
+
+            Console.WriteLine("Selecione um paciente:");
+            for (int i = 0; i < pacientes.Count; i++)
+            {
+                Console.WriteLine($"{i + 1}. {pacientes[i].Nome}");
+            }
+            int pacienteIndex = int.Parse(Console.ReadLine()) - 1;
+
+            Console.WriteLine("Selecione um médico:");
+            for (int i = 0; i < medicos.Count; i++)
+            {
+                Console.WriteLine($"{i + 1}. {medicos[i].Nome} - {medicos[i].Especialidade}");
+            }
+            int medicoIndex = int.Parse(Console.ReadLine()) - 1;
+
+            Console.Write("Data e Hora da Consulta (dd/MM/yyyy HH:mm): ");
+            DateTime dataHora = DateTime.Parse(Console.ReadLine());
+
+            Consulta consulta = new Consulta
+            {
+                Id = consultas.Count + 1,
+                Paciente = pacientes[pacienteIndex],
+                Medico = medicos[medicoIndex],
+                DataHora = dataHora,
+                Status = "Agendada"
+            };
+            consultas.Add(consulta);
+            Console.WriteLine("Consulta agendada com sucesso!");
+        }
+
+        static void VisualizarConsultas()
+        {
+            Console.Clear();
+            Console.WriteLine("Consultas Agendadas");
+            foreach (var consulta in consultas)
+            {
+                Console.WriteLine($"ID: {consulta.Id} | Paciente: {consulta.Paciente.Nome} | Médico: {consulta.Medico.Nome} | Data e Hora: {consulta.DataHora} | Status: {consulta.Status}");
+            }
+        }
+    }
+
+    public class Paciente
+    {
+        public string Nome { get; set; }
+        public DateTime DataNascimento { get; set; }
+        public string CPF { get; set; }
+        public string Endereco { get; set; }
+        public string Telefone { get; set; }
+    }
+
+    public class Medico
+    {
+        public string Nome { get; set; }
+        public string Especialidade { get; set; }
+        public string CRM { get; set; }
+    }
+
+    public class Consulta
+    {
+        public int Id { get; set; }
+        public Paciente Paciente { get; set; }
+        public Medico Medico { get; set; }
+        public DateTime DataHora { get; set; }
+        public string Status { get; set; }
+    }
+}
